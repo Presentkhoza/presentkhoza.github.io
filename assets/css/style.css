@@ -367,17 +367,17 @@ h3{
 
 
 .btn {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Keep text color same as before */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .btn:visited {
-    color: inherit; /* Prevent purple visited color */
+    color: inherit; 
 }
 
 .btn:hover {
-    /* Keep your hover styles here, e.g.: */
-    background-color: #0056b3; 
+    
+    background-color: var(--text-color-third); 
     color: white; 
 }
 
@@ -756,4 +756,5 @@ footer{
     .input-field{
         width: 100%;
     }
+
 }
