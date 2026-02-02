@@ -384,9 +384,19 @@ body {
 
 .nav-buttons {
     display: flex;
-    color: #ffffff;
+    color: var(--react-primary);
     align-items: center;
     gap: 1rem;
+}
+.nav-buttons .btn {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-white);
+}
+.hero-buttons .btn {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-white);
 }
 
 .nav-toggle {
@@ -401,9 +411,9 @@ body {
 }
 
 .nav-toggle:hover {
-    color: var(--react-primary);
-}
+    color: var(--color-white);
 
+}
 /* Mobile Menu */
 .mobile-menu-overlay {
     position: fixed;
@@ -510,8 +520,8 @@ body {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(97, 218, 251, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(3, 23, 28, 0.621) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(3, 47, 167, 0.468) 0%, transparent 50%);
     z-index: -1;
 }
 
@@ -604,6 +614,8 @@ body {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    max-width: 100%;
+
 }
 
 .image-container img {
@@ -1383,6 +1395,7 @@ footer {
 
 .newsletter-form .btn {
     width: 100%;
+    color: var(--color-white);
     justify-content: center;
 }
 
