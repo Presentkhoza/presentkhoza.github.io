@@ -1,0 +1,171 @@
+/* Add these global styles to your existing CSS file */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* React-specific animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Framer Motion animations */
+.motion-scale {
+  transform-origin: center;
+}
+
+/* Loading states */
+.btn-loading {
+  position: relative;
+  padding-left: 2.5rem !important;
+}
+
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+/* ===== EXPERIENCE SECTION - Matching Skills Design ===== */
+.experience-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.experience-details h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
+    margin: 0;
+}
+
+.experience-details p {
+    font-size: 0.85rem;
+    color: var(--text-color-secondary);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Maintain existing skills-grid styles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    transition: var(--transition-normal);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    background: rgba(97, 218, 251, 0.1);
+    border-color: var(--react-primary);
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--react-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.skill-item:hover {
+    background: rgba(97, 218, 251, 0.2);
+    border-color: var(--react-primary);
+    transform: translateX(5px);
+}
+
+.skill-item i {
+    font-size: 1.25rem;
+    color: var(--react-primary);
+    min-width: 24px;
+    margin-top: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-card {
+    padding: 1.5rem;
+  }
+  
+  .experience-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .experience-date {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .experience-footer {
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+  }
+}
+
+@keyframes spin {
+  to { transform: translateY(-50%) rotate(360deg); }
+}
